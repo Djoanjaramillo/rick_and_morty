@@ -18,4 +18,5 @@ export default function NavBar({onSearch, random}) {
       </button>
     </div>
   );
-}
+};
+
