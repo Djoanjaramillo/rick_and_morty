@@ -35,7 +35,7 @@ function App() {
 
   function searchHandler(id) {
    
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(({data}) => {
+    axios(`https://rickandmortyapi.com/api/${id}`).then(({data}) => {
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
       } else {
@@ -60,7 +60,7 @@ function App() {
 
     if (!haveIt.includes(random)) {
       haveIt.push(random);
-      fetch(`https://rickandmortyapi.com/api/character/${random}`)
+      fetch(`http://localhost:3001/rickandmorty/character/${random}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.name) {
